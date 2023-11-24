@@ -1,7 +1,7 @@
 package com.zenika.ddd.commande;
 
 import com.zenika.ddd.course.CourseEntity;
-import com.zenika.ddd.doc.DomainObject;
+import com.zenika.ddd.doc.DomainService;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Builder
 @Getter
-@DomainObject
+@DomainService
 @NoArgsConstructor
 public class SelectionnerCommandeDomainService {
 
