@@ -6,10 +6,7 @@ import com.zenika.ddd.mvc.adapter.DepotPieceMapper;
 import com.zenika.ddd.mvc.dto.ValiderDepotPiecesByApprenantResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -27,5 +24,10 @@ public class ValidationPiecesDepotApprenantController {
     public ResponseEntity<ValiderDepotPiecesByApprenantResponseDto> validerDepot(@PathVariable("apprenantId") UUID apprenantId, @PathVariable("formationId") UUID formationId) {
         List<DepotPieceJustificativeEntity> depotPieceJustificativeEntities = validationDepotApplicationService.accepterTousLesDepotsParApprenantEtInscription(apprenantId, formationId);
         return ResponseEntity.ok(depotPieceMapper.toValiderDepotPiecesByApprenantResponseDto(depotPieceJustificativeEntities));
+    }
+
+    @GetMapping("/toto")
+    public String toto() {
+        return "toto";
     }
 }

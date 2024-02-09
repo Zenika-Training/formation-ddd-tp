@@ -6,7 +6,6 @@
         <artifactId>ddd</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.decathlon.mka</groupId>
     <artifactId>livraison-application</artifactId>
     <name>Livraison - application</name>
 
@@ -27,6 +26,12 @@
         <dependency>
             <groupId>com.zenika.ddd</groupId>
             <artifactId>livraison-domain</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.zenika</groupId>
+            <artifactId>livraison-infrastructure</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

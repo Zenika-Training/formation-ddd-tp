@@ -17,4 +17,8 @@ public class RechercherToutesLesPiecesDeposeesDUnApprenantService {
     public List<DepotPieceJustificativeEntity> rechercherDepotParAprenantEtFormation(UUID apprenant, UUID formationId) {
         return pieceDeposeeRepository.findAllByApprenantIdAndFormationId(apprenant, formationId);
     }
+
+    public List<DepotPieceJustificativeEntity> rechercherDepotParAprenant(UUID apprenant) {
+        return pieceDeposeeRepository.findAllByApprenantUuid(apprenant);
+    }
 }

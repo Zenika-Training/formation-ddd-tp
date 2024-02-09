@@ -15,7 +15,7 @@ public class ValidationDepotApplicationService {
     private final RechercherToutesLesPiecesDeposeesDUnApprenantService rechercheDomainService;
 
     public List<DepotPieceJustificativeEntity> accepterTousLesDepotsParApprenantEtInscription(UUID apprenantId, UUID formationId) {
-        return rechercheDomainService.rechercherDepotParAprenantEtFormation(apprenantId, formationId).stream()
+        return rechercheDomainService.rechercherDepotParAprenant(apprenantId).stream()
                 .map(depotPiece -> {
                     depotPiece.accepterPieceJustificative();
                     return depotPiece;
@@ -24,7 +24,7 @@ public class ValidationDepotApplicationService {
     }
 
     public List<DepotPieceJustificativeEntity> refuserTousLesDepotsParApprenantEtInscription(UUID apprenantId, UUID formationId) {
-        return rechercheDomainService.rechercherDepotParAprenantEtFormation(apprenantId, formationId)
+        return rechercheDomainService.rechercherDepotParAprenant(apprenantId)
                 .stream()
                 .map(depotPiece -> {
                     depotPiece.refuserPieceJustificative();

@@ -40,6 +40,10 @@ public class DefinitionPieceJustificativeEntity {
         );
     }
 
+    public UUID getId() {
+        return this.uuid;
+    }
+
     public String getLibellePiece() {
         return libellePiece;
     }

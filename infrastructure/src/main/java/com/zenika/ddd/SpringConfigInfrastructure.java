@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @EnableJpaRepositories("com.zenika.ddd.repository")
-@EntityScan("com.zenika.ddd.infrastructure.entity")
-public class SpringConfig {
+@EntityScan("com.zenika.ddd.entity")
+public class SpringConfigInfrastructure {
 }

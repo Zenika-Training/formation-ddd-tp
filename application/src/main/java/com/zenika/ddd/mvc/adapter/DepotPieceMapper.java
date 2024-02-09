@@ -6,13 +6,12 @@ import com.zenika.ddd.mvc.dto.ValiderDepotPiecesByApprenantResponseDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class DepotPieceMapper {
 
     public ValiderDepotPiecesByApprenantResponseDto toValiderDepotPiecesByApprenantResponseDto(List<DepotPieceJustificativeEntity> depotPieceJustificativeEntities) {
-        List<PieceDeposeeDto> pieceDeposeeDtos = depotPieceJustificativeEntities.stream().map(this::map).collect(Collectors.toList());
+        List<PieceDeposeeDto> pieceDeposeeDtos = depotPieceJustificativeEntities.stream().map(this::map).toList();
         return ValiderDepotPiecesByApprenantResponseDto.builder()
                 .uuidApprenant(depotPieceJustificativeEntities.get(0).getId().id())
                 .pieceDeposeeDtos(pieceDeposeeDtos)
