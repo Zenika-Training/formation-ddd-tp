@@ -1,6 +1,5 @@
 package com.zenika.ddd.domain.depot;
 
-import com.zenika.ddd.doc.DomainObject;
 import com.zenika.ddd.port.PieceDeposeeRepository;
 
 import java.time.LocalDate;
@@ -8,7 +7,6 @@ import java.util.Objects;
 import java.util.UUID;
 
 @SuppressWarnings("LombokGetterMayBeUsed")
-@DomainObject
 public class DepotPieceJustificativeEntity {
     private DepotVoId id;
     private StatutDepot statutDepot = StatutDepot.DEPOSE;
@@ -21,8 +19,8 @@ public class DepotPieceJustificativeEntity {
     private boolean temoinValide;
     private final PieceDeposeeRepository repository;
 
-    public DepotPieceJustificativeEntity() {
-        this.repository = null;
+    public DepotPieceJustificativeEntity(PieceDeposeeRepository repository) {
+        this.repository = repository;
     }
 
     public DepotPieceJustificativeEntity(

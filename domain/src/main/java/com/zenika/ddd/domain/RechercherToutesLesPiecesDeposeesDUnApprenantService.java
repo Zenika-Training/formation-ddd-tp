@@ -12,7 +12,7 @@ import java.util.UUID;
 @DomainService
 public class RechercherToutesLesPiecesDeposeesDUnApprenantService {
 
-    private PieceDeposeeRepository pieceDeposeeRepository;
+    private final PieceDeposeeRepository pieceDeposeeRepository;
 
     public List<DepotPieceJustificativeEntity> rechercherDepotParAprenantEtFormation(UUID apprenant, UUID formationId) {
         return pieceDeposeeRepository.findAllByApprenantIdAndFormationId(apprenant, formationId);
