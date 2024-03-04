@@ -5,6 +5,7 @@ import com.zenika.ddd.shared.Adresse;
 import lombok.*;
 
 @Getter
+@NoArgsConstructor
 @RequiredArgsConstructor
 @Builder
 @DomainObject
