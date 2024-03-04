@@ -20,9 +20,6 @@ class AddToCatalogServiceSpringTest {
 
     @Test
     public void canAddReferenceToCatalog() {
-        referenceRepository = new InMemoryReferenceRepository();
-        addToCatalogService = new AddToCatalogService(referenceRepository);
-
         var code = Code.generate();
         addToCatalogService.addToCatalog(
                 code,
