@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class JdbcReferenceRepositoryTests {
@@ -33,4 +32,14 @@ class JdbcReferenceRepositoryTests {
         vanRyselRef.addCharacteristic("test", "test");
     }
 
+    @Test
+    public void canFindAllReferences() {
+        var vanRyselRef = Fixtures.vanRyselReference();
+        var ultra900CF = Fixtures.ultra900CF();
+        jdbcReferenceRepository.add(vanRyselRef);
+        jdbcReferenceRepository.add(ultra900CF);
+        var savedRefs = jdbcReferenceRepository.findAll();
+        assertNotNull(savedRefs);
+        assertTrue(savedRefs.size() >= 2);
+    }
 }

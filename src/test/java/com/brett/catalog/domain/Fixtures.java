@@ -21,4 +21,18 @@ public class Fixtures {
                         "usage", "adventure"))
         );
     }
+
+    public static Reference ultra900CF() {
+        return Reference.make(
+                Code.generate(),
+                "Ultra 900 CF Carbon Road Bike",
+                """
+                       The B'Twin Ultra 900 CF Carbon Road Bike is designed for serious road cyclists looking for performance and value.""",
+                new PricePerDay(new AmountInCents(30)),
+                new HashMap<>(Map.of("type", "road",
+                        "frame", "mixed",
+                        "characteristic", "lightweight",
+                        "usage", "adventure"))
+        );
+    }
 }

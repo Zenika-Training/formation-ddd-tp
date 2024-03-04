@@ -1,6 +1,6 @@
 CREATE TABLE reference (
     code VARCHAR(36) PRIMARY KEY,
-    name VARCHAR(255) UNIQUE NOT NULL,
+    name VARCHAR(255) NOT NULL,
     description TEXT,
     price_per_day INT NOT NULL
 );
