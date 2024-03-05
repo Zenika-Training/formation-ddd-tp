@@ -2,6 +2,7 @@ package com.brett.catalog.domain.velo;
 
 import com.brett.Aggregate;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,7 @@ public class ModeleDeVelo {
     private final CodeModeleVelo codeModele;
     private Status status;
     private List<Tag> tags;
+    private LocalDate lastStatusUpdateDate;
 
     public ModeleDeVelo(CodeModeleVelo codeModele) {
         this.status = Status.Actif;
