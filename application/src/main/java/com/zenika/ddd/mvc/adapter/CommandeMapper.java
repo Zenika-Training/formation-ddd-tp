@@ -1,6 +1,6 @@
 package com.zenika.ddd.mvc.adapter;
 
-import com.zenika.ddd.commande.OrderEntity;
+import com.zenika.ddd.subdomaindelivery.order.OrderEntity;
 import com.zenika.ddd.mvc.dto.OrderDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

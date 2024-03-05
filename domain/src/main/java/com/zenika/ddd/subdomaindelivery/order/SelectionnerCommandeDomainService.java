@@ -1,6 +1,6 @@
-package com.zenika.ddd.commande;
+package com.zenika.ddd.subdomaindelivery.order;
 
-import com.zenika.ddd.course.CourseEntity;
+import com.zenika.ddd.subdomaindelivery.deliveryman.DeliveryEntity;
 import com.zenika.ddd.doc.DomainService;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,11 +21,11 @@ public class SelectionnerCommandeDomainService {
         commandes.add(commande);
     }
 
-    public CourseEntity selectionnerCommande(OrderEntity commande) {
+    public DeliveryEntity selectionnerCommande(OrderEntity commande) {
 
-        CourseEntity course = CourseEntity.builder()
-                .commandeId(commande.getId())
-                .build();
+        DeliveryEntity course = DeliveryEntity.builder()
+                                              .commandeId(commande.getId())
+                                              .build();
 
         return course;
     }

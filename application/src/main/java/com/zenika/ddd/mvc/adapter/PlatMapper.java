@@ -1,6 +1,6 @@
 package com.zenika.ddd.mvc.adapter;
 
-import com.zenika.ddd.commande.ItemVO;
+import com.zenika.ddd.subdomaindelivery.order.ItemVO;
 import com.zenika.ddd.mvc.dto.PlatDto;
 import org.springframework.stereotype.Component;
 

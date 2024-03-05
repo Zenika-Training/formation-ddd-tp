@@ -1,4 +1,4 @@
-package com.zenika.ddd.commande;
+package com.zenika.ddd.subdomaindelivery.order;
 
 import com.zenika.ddd.doc.DomainObject;
 import com.zenika.ddd.shared.Adresse;

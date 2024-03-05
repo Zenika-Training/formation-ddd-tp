@@ -1,4 +1,4 @@
-package com.zenika.ddd.course;
+package com.zenika.ddd.subdomaindelivery.deliveryman;
 
 import com.zenika.ddd.shared.Adresse;
 import com.zenika.ddd.shared.Position;
@@ -9,7 +9,7 @@ import java.util.UUID;
 @Builder
 public class RestaurantEntity {
     private UUID id;
-    private String raisonSociale;
     private Adresse adresse;
     private Position position;
 }
+

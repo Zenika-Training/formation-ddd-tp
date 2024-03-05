@@ -1,4 +1,4 @@
-package com.zenika.ddd.course;
+package com.zenika.ddd.subdomaindelivery.deliveryman;
 
 import com.zenika.ddd.doc.DomainObject;
 import com.zenika.ddd.shared.StatutCourse;
@@ -14,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @DomainObject
-public class CourseEntity {
+public class DeliveryEntity {
     @Builder.Default
     private final UUID id = UUID.randomUUID();
     private UUID commandeId;
