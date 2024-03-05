@@ -57,7 +57,7 @@ public class Order {
         this.status = EnumStatusOrder.ACCEPTED;
     }
 
-    public Boolean isCompleted() {
+    public boolean isCompleted() {
 
         boolean result = false;
 

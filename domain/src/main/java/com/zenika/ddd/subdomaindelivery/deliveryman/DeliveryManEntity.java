@@ -21,10 +21,12 @@ public class DeliveryManEntity {
     public void moveToPosition(Position position, float distance) {
         while (!position.isCloseToPosition(this.position, distance)) {
             if (position.latitude() > this.position.latitude()) {
-                this.position = new Position(this.position.latitude() + 0.0002, this.position.longitude());
+                double dist = Math.min(0.0002, position.latitude() -  this.position.latitude());
+                this.position = new Position(this.position.latitude() + dist, this.position.longitude());
             }
             if (position.latitude() < this.position.latitude()) {
-                this.position = new Position(this.position.latitude() - 0.0002, this.position.longitude());
+                double dist = Math.min(0.0002, this.position.latitude() - position.latitude() );
+                this.position = new Position(this.position.latitude() - dist, this.position.longitude());
             }
             if (position.longitude() > this.position.longitude()) {
                 double dist = Math.min(0.0002, this.position.latitude() - position.latitude() );
