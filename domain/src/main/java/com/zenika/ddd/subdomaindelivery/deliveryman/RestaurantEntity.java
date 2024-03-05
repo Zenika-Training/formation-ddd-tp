@@ -11,5 +11,9 @@ public class RestaurantEntity {
     private UUID id;
     private Adresse adresse;
     private Position position;
+
+    public Position getPosition() {
+        return new Position(position.latitude(), position.longitude());
+    }
 }
 

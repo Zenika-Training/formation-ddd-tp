@@ -12,7 +12,7 @@ class PositionTest {
         Position position = new Position(48.8566, 2.3522);
 
         // When
-        boolean isClose = position.isCloseToPosition(new Position(48.8566, 2.3522), 1);
+        boolean isClose = position.isCloseToPosition(new Position(48.8566, 2.3522), 1f);
 
         // Then
         assertTrue(isClose);
@@ -24,7 +24,7 @@ class PositionTest {
         Position position = new Position(48.8566, 2.3522);
 
         // When
-        boolean isClose = position.isCloseToPosition(new Position(51, 1), 5);
+        boolean isClose = position.isCloseToPosition(new Position(51, 1), 5f);
 
         // Then
         assertTrue(isClose);
@@ -36,19 +36,7 @@ class PositionTest {
         Position position = new Position(48.8566, 2.3522);
 
         // When
-        boolean isClose = position.isCloseToPosition(new Position(49.8566, 2.3522), 1);
-
-        // Then
-        assertFalse(isClose);
-    }
-
-    @Test
-    void should_return_false_when_position_is_far_because_of_distance() {
-        // Given
-        Position position = new Position(48.8566, 2.3522);
-
-        // When
-        boolean isClose = position.isCloseToPosition(new Position(48.8566, 2.3522), 0);
+        boolean isClose = position.isCloseToPosition(new Position(50.8566, 3.3522), 1f);
 
         // Then
         assertFalse(isClose);

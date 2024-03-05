@@ -1,5 +1,8 @@
 package com.zenika.ddd.subdomainrestaurant;
 
+import lombok.Builder;
+
+@Builder
 public class Item {
 
     private String name;

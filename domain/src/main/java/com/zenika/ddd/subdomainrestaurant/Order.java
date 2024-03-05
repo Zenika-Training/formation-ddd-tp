@@ -1,7 +1,6 @@
 package com.zenika.ddd.subdomainrestaurant;
 
 import com.zenika.ddd.doc.DomainObject;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.UUID;
@@ -16,23 +15,25 @@ public class Order {
     private UUID id;
 
 
-    public Order() {
+    public Order(List<Item> items) {
         id = UUID.randomUUID();
         status = EnumStatusOrder.CREATED;
+        this.items = items;
     }
 
-    public Order(UUID id) {
+    public Order(UUID id, List<Item> items) {
         this.id = id;
         status = EnumStatusOrder.CREATED;
+        this.items = items;
     }
 
 
 
     public void collect() throws OrderNotReadyException {
-        if (status != EnumStatusOrder.READY) {
+        if (status != EnumStatusOrder.READY_TO_COLLECT) {
             throw new OrderNotReadyException(this);
         }
-        this.status = EnumStatusOrder.COLLECTED;
+        this.status = EnumStatusOrder.IN_TRANSIT;
     }
 
 
@@ -70,4 +71,9 @@ public class Order {
         return result;
     }
 
+
+
+    public boolean isInTransit() {
+        return this.status == EnumStatusOrder.IN_TRANSIT;
+    }
 }
