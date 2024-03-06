@@ -14,6 +14,8 @@ class PlatMapperTest {
 
     PlatMapper platMapper = new PlatMapper();
 
+
+
     @Test
     @DisplayName("Should map PlatDto to PlatVO")
     void should_map_PlatDto_to_PlatVO() {
@@ -29,11 +31,12 @@ class PlatMapperTest {
         // Then
         assertFalse(platVO.isEmpty());
         assertThat(platVO.get(0)).extracting(
-                    "nom",
-                    "prix")
-                    .containsExactly(
-                            "nom",
-                            10.0
-                    );
+                                     "name",
+                                     "price"
+                                 )
+                                 .containsExactly(
+                                     "nom",
+                                     10.0
+                                 );
     }
 }

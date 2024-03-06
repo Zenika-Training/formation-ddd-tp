@@ -8,14 +8,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 
 @Configuration
-@ComponentScan(basePackages = "com.zenika.ddd")
 @ComponentScan(
         basePackages = "com.zenika.ddd",
+        basePackageClasses = { SpringConfigInfrastructure.class },
         includeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, classes = {
                 DomainObject.class,
                 DomainService.class,
                 Stub.class
         })}
 )
-public class SpringConfig {
+public class ApplicationSpringConfig {
 }
