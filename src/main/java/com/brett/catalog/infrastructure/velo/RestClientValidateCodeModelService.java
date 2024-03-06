@@ -9,7 +9,7 @@ import org.springframework.web.client.RestClient;
 @Service
 public class RestClientValidateCodeModelService implements ValidateCodeModelService {
 
-    @Autowired
+    //@Autowired
     RestClient restClient;
 
     @Override
