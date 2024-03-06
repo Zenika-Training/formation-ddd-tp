@@ -1,8 +1,8 @@
-package com.zenika.ddd.subdomainrestaurant;
+package com.zenika.ddd.aggregateorder;
 
 import com.zenika.ddd.doc.DomainService;
-import com.zenika.ddd.subdomaindelivery.deliveryman.DeliveryManEntity;
-import com.zenika.ddd.subdomaindelivery.deliveryman.RestaurantEntity;
+import com.zenika.ddd.aggregatedelivery.DeliveryManEntity;
+import com.zenika.ddd.aggregatedelivery.RestaurantEntity;
 
 @DomainService
 public class CollectReadyOrdersService {

@@ -2,7 +2,7 @@ package com.zenika.ddd.mvc.order;
 
 import com.zenika.ddd.mvc.order.adapter.OrderDtoMapper;
 import com.zenika.ddd.mvc.order.dto.OrderDto;
-import com.zenika.ddd.subdomainrestaurant.GetOrderDomainService;
+import com.zenika.ddd.aggregateorder.GetOrderDomainService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

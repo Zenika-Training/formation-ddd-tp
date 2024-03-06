@@ -1,6 +1,5 @@
-package com.zenika.ddd.subdomainrestaurant;
+package com.zenika.ddd.aggregateorder;
 
-import java.awt.*;
 import java.util.UUID;
 
 public class CustomerOrder {

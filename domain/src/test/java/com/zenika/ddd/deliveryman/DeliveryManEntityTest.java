@@ -1,6 +1,6 @@
 package com.zenika.ddd.deliveryman;
 
-import com.zenika.ddd.subdomaindelivery.deliveryman.DeliveryManEntity;
+import com.zenika.ddd.aggregatedelivery.DeliveryManEntity;
 import com.zenika.ddd.shared.Position;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

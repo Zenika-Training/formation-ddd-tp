@@ -2,7 +2,7 @@ package com.zenika.ddd.mvc.order.adapter;
 
 import com.zenika.ddd.mvc.order.dto.OrderDto;
 import com.zenika.ddd.mvc.order.dto.PlatDto;
-import com.zenika.ddd.subdomainrestaurant.Order;
+import com.zenika.ddd.aggregateorder.Order;
 import org.springframework.stereotype.Component;
 
 @Component

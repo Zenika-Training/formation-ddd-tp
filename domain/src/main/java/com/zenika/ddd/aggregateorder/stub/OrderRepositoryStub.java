@@ -1,10 +1,10 @@
-package com.zenika.ddd.subdomainrestaurant.stub;
+package com.zenika.ddd.aggregateorder.stub;
 
 import com.zenika.ddd.doc.Stub;
-import com.zenika.ddd.subdomainrestaurant.EnumStatusOrder;
-import com.zenika.ddd.subdomainrestaurant.Item;
-import com.zenika.ddd.subdomainrestaurant.Order;
-import com.zenika.ddd.subdomainrestaurant.out.OrderRepository;
+import com.zenika.ddd.aggregateorder.EnumStatusOrder;
+import com.zenika.ddd.aggregateorder.Item;
+import com.zenika.ddd.aggregateorder.Order;
+import com.zenika.ddd.aggregateorder.out.OrderRepository;
 
 import java.util.List;
 import java.util.UUID;

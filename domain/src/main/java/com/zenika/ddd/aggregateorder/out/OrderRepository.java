@@ -1,6 +1,6 @@
-package com.zenika.ddd.subdomainrestaurant.out;
+package com.zenika.ddd.aggregateorder.out;
 
-import com.zenika.ddd.subdomainrestaurant.Order;
+import com.zenika.ddd.aggregateorder.Order;
 
 import java.util.List;
 

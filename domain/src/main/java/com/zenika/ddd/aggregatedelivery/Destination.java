@@ -1,4 +1,4 @@
-package com.zenika.ddd.subdomaindelivery.deliveryman;
+package com.zenika.ddd.aggregatedelivery;
 
 import com.zenika.ddd.shared.Adresse;
 

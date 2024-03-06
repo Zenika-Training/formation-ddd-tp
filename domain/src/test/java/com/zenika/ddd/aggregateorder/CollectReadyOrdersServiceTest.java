@@ -1,9 +1,9 @@
-package com.zenika.ddd.subdomainrestaurant;
+package com.zenika.ddd.aggregateorder;
 
 import com.zenika.ddd.shared.Adresse;
 import com.zenika.ddd.shared.Position;
-import com.zenika.ddd.subdomaindelivery.deliveryman.DeliveryManEntity;
-import com.zenika.ddd.subdomaindelivery.deliveryman.RestaurantEntity;
+import com.zenika.ddd.aggregatedelivery.DeliveryManEntity;
+import com.zenika.ddd.aggregatedelivery.RestaurantEntity;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

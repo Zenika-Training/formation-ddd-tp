@@ -1,4 +1,4 @@
-package com.zenika.ddd.subdomainrestaurant;
+package com.zenika.ddd.aggregateorder;
 
 import lombok.Builder;
 import lombok.Getter;
