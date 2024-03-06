@@ -17,9 +17,13 @@ import java.util.UUID;
 @DomainObject
 public class OrderEntity {
 
-    private UUID id;
+    private record OrderVoId(UUID id){
+
+    }
+
+    private OrderVoId id;
     private ConsumerEntity consumerEntity;
     private LocalDateTime dateCommande;
-    private List<ItemVO> itemVOList;
+    private List<Item> itemList;
 
 }

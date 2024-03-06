@@ -7,5 +7,5 @@ import java.util.List;
 
 @ValueObject
 @Builder
-public record ItemVO(String nom, double prix, List<byte[]> images) {
+public record Item(String nom, double prix, List<byte[]> images) {
 }

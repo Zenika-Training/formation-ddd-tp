@@ -1,29 +1,50 @@
 package com.zenika.ddd.subdomainrestaurant;
 
 import com.zenika.ddd.doc.DomainObject;
+import lombok.Builder;
+import lombok.Getter;
 
 import java.util.List;
 import java.util.UUID;
 
 @DomainObject
+@Builder
+@Getter
 public class Order {
+
+    public record OrderVoId(UUID id) {
+    }
+
+    public Order(OrderVoId id) {
+        this.id = id;
+    }
+
+    private final OrderVoId id;
 
     EnumStatusOrder status;
 
     List<Item> items;
 
-    private UUID id;
-
+    public Order() {
+        id = new OrderVoId(UUID.randomUUID());
+        status = EnumStatusOrder.CREATED;
+    }
 
     public Order(List<Item> items) {
-        id = UUID.randomUUID();
+        id = new OrderVoId(UUID.randomUUID());
         status = EnumStatusOrder.CREATED;
         this.items = items;
     }
 
-    public Order(UUID id, List<Item> items) {
+    public Order(OrderVoId id, List<Item> items) {
         this.id = id;
         status = EnumStatusOrder.CREATED;
+        this.items = items;
+    }
+
+    public Order(OrderVoId id, EnumStatusOrder status, List<Item> items) {
+        this.id = id;
+        this.status = status;
         this.items = items;
     }
 

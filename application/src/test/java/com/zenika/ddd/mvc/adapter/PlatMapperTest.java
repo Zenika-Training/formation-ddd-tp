@@ -1,6 +1,7 @@
 package com.zenika.ddd.mvc.adapter;
 
-import com.zenika.ddd.mvc.dto.PlatDto;
+import com.zenika.ddd.mvc.order.adapter.PlatMapper;
+import com.zenika.ddd.mvc.order.dto.PlatDto;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

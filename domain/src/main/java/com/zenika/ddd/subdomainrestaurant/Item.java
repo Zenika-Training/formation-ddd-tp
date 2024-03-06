@@ -1,10 +1,19 @@
 package com.zenika.ddd.subdomainrestaurant;
 
 import lombok.Builder;
+import lombok.Getter;
+
+import java.util.UUID;
 
 @Builder
+@Getter
 public class Item {
 
+    public record ItemVoId(UUID id) {
+
+    }
+
+    private ItemVoId id;
     private String name;
     private Double price;
     private long preparationTimeInMinutes = 10;

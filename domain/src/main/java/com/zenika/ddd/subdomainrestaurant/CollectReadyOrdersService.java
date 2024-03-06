@@ -19,10 +19,8 @@ public class CollectReadyOrdersService {
             throw new DeliveryManTooFarException();
         }
 
-
         // The delivery should collect the order when the order is ready
         order.collect();
-
     }
 
 }
