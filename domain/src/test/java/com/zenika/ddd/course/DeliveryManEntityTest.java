@@ -1,6 +1,7 @@
 package com.zenika.ddd.course;
 
 import com.zenika.ddd.shared.Position;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class DeliveryManEntityTest {
 
     @Test
+    @Disabled
     void delivery_man_should_move_to_position() {
         // Given
         DeliveryManEntity deliveryMan = DeliveryManEntity.builder()

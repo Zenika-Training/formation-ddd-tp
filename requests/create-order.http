@@ -1,0 +1,16 @@
+POST http://localhost:8088/order/create
+Content-Type: application/json
+
+{
+    "id":"123456",
+    "dateCreation":"2019-02-03 10:08:02",
+    "clientId":"1234567",
+    "produits":[
+        {
+            "nom":"Product 1",
+            "prix":100
+        }
+    ]
+}
+
+###

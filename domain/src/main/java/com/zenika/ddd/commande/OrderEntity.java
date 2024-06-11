@@ -1,25 +1,34 @@
 package com.zenika.ddd.commande;
 
-import com.zenika.ddd.doc.DomainObject;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
 @Getter
-@DomainObject
 public class OrderEntity {
 
-    private UUID id;
+    private String id;
     private ConsumerEntity consumerEntity;
     private LocalDateTime dateCommande;
     private List<ItemVO> itemVOList;
 
+    @Builder.Default
+    private OrderStatus orderStatus = OrderStatus.CREATED;
+
+    public void pay() {
+
+        if (this.orderStatus != OrderStatus.CREATED) {
+            throw new IllegalStateException("Order shoyld be in CREATED status to be payed.");
+        }
+
+        if (this.orderStatus == OrderStatus.PAYED) {
+            throw new IllegalStateException("Order is already payed");
+        }
+
+
+        this.orderStatus = OrderStatus.PAYED;
+    }
 }

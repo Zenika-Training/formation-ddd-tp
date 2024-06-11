@@ -11,13 +11,21 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class CommandeMapper {
 
-    private final PlatMapper platMapper;
+    private final ProduitMapper produitMapper;
 
     public OrderEntity toCommandeEntity(OrderDto orderDto) {
         return OrderEntity.builder()
-                          .id(UUID.fromString(orderDto.getId()))
-                          .dateCommande(orderDto.getDateCommande())
-                          .itemVOList(PlatMapper.toPlatVOList(orderDto.getPlats()))
+                          .id(orderDto.getId())
+                          .dateCommande(orderDto.getDateCreation())
+                          .itemVOList(ProduitMapper.toItemVOList(orderDto.getProduits()))
                           .build();
+    }
+
+    public OrderDto toOrderDto(OrderEntity orderEntity) {
+        return OrderDto.builder()
+                       .id(orderEntity.getId().toString())
+                       .dateCreation(orderEntity.getDateCommande())
+                       .produits(produitMapper.toProduitVOList(orderEntity.getItemVOList()))
+                       .build();
     }
 }
