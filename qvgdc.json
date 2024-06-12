@@ -1,0 +1,203 @@
+{
+  "title": "̈Domain Driven Design - Day 3",
+  "questions": [
+    {
+      "duration": 20,
+      "title": "Quelles sont les 2 causes de la complexité logicielle ?",
+      "choices": [
+        {
+          "title": "Service oriented architecture + Objets anémiques\t\n"
+        },
+        {
+          "title": "Complexité réelle (métier) + Accidentelle (Technique) : Couplage, nommage, modélisation...",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "duration": 20,
+      "title": "Une bonne modélisation",
+      "choices": [
+        {
+          "title": "Représente avec fidélité un problème du monde réel"
+        },
+        {
+          "title": "Doit rester le plus simple possible pour répondre à la résolution d'un problème dans un certain contexte\t\n",
+          "valid": true
+        },
+        {
+          "title": "Doit être unifiée entre toutes les fonctionnalités du système"
+        }
+      ]
+    },
+    {
+      "duration": 20,
+      "title": "Le knowledge crunching",
+      "choices": [
+        {
+          "title": "Consiste en une série d'ateliers itératifs servant d'exploration\t\n",
+          "valid": true
+        },
+        {
+          "title": "Doit être réalisé avant le début du projet pour le chiffrer\t\n"
+        },
+        {
+          "title": "Est réalisé à chaque fin d'itération"
+        }
+      ]
+    },
+    {
+      "duration": 20,
+      "title": "Entities et VO",
+      "choices": [
+        {
+          "title": "Sont deux types d'objets immuables\t\n"
+        },
+        {
+          "title": "Les entities sont comparables par leur seul identifiant alors que les VO doivent l'être pour l'ensemble de leurs attributs",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "duration": 30,
+      "title": "Pourquoi le sens des dépendances d'une clean archi va toujours de l'extérieur vers l'intérieur ?",
+      "choices": [
+        {
+          "title": "Car aucune donnée du domaine ne va vers l'extérieur."
+        },
+        {
+          "title": "Car le domaine est en surface de l'application et doit dépendre de détails techniques"
+        },
+        {
+          "title": "Grâce à l'inversion de dépendance on garantit qu'aucune dépendance technique ne vienne \"polluer\" le domaine.",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "duration": 30,
+      "title": "On retrouve les implémentations des repositories dans la couche infrastructure",
+      "choices": [
+        {
+          "title": "Je ne sais pas."
+        },
+        {
+          "title": "Faux."
+        },
+        {
+          "title": "Vrai.",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "duration": 30,
+      "title": "Les interfaces des repositories se trouvent aussi dans la couche infrastructure",
+      "choices": [
+        {
+          "title": "Vrai."
+        },
+        {
+          "title": "Je ne sais pas."
+        },
+        {
+          "title": "Faux",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "duration": 30,
+      "title": "Passer par une interface pour les ApplicationService serait de l'over-engineering",
+      "choices": [
+        {
+          "title": "Faux, il faut systématiquement passer par une interface."
+        },
+        {
+          "title": "Peu importe, La clean architecture elle-même est une forme d'over-engineering."
+        },
+        {
+          "title": "Vrai, les ApplicationService peuvent appeler directement le domaine depuis leur couche application",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "duration": 15,
+      "title": "Que ce soit pour entrer ou sortir d'une clean archi, on doit forcément passer par une couche de traduction (Mappers ou Adapters)",
+      "choices": [
+        {
+          "title": "Vrai, on ne veut aucune préoccupation technique dans le domaine et les structures de données exposées à l'extérieur en font partie.",
+          "valid": true
+        },
+        {
+          "title": "Faux, si la communication est interne à l'entreprise, on peut s'en passer car les structures de données exposées à l'extérieur de l'hexagone correspondent déjà à la structure des objets du domaine."
+        }
+      ]
+    },
+    {
+      "duration": 15,
+      "title": "Quel context mapping serait le plus adapté au développement d'un POC ou MVP ?",
+      "choices": [
+        {
+          "title": "Upstream / Downstream."
+        },
+        {
+          "title": "Separate ways",
+          "valid": true
+        },
+        {
+          "title": "Partnership"
+        },
+        {
+          "title": "Shared kernel"
+        },
+        {
+          "title": "Conformist"
+        },
+        {
+          "title": "Anticorruption layer"
+        },
+        {
+          "title": "Open host service"
+        },
+        {
+          "title": "Published language"
+        },
+        {
+          "title": "Customer / Supplier"
+        },
+        {
+          "title": "Big ball of mud"
+        }
+      ]
+    },
+    {
+      "duration": 15,
+      "title": "Le bounded context canvas",
+      "choices": [
+        {
+          "title": "Fait partie de l'exercice d'event storming."
+        },
+        {
+          "title": "Sert à explorer et documenter le design d'un contexte borné.",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "duration": 30,
+      "title": "Quelle différence entre un stub et un mock ?",
+      "choices": [
+        {
+          "title": "Un stub est développé pour faire exactement ce que l'on attend de lui. Alors qu'un mock est un objet venant d'un framework qui simule le comportement d'un objet réel. On n'a pas besoin de développer un mock, on le configure.",
+          "valid": true
+        },
+        {
+          "title": "Dans une clean architecture, on utilise des stubs pour les tests unitaires et des mocks pour les tests e2e."
+        }
+      ]
+    }
+  ]
+}
