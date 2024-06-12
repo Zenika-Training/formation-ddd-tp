@@ -20,8 +20,6 @@ public class CreateOrderApplicationService {
 
         OrderEntity orderEntity = selectionnerCommandeDomainService.ajouterCommande(commandeEntity);
 
-
-
         return commandeMapper.toOrderDto(orderEntity);
     }
 }

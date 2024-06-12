@@ -1,5 +1,7 @@
 package com.zenika.ddd.commande;
 
+import com.zenika.ddd.course.DeliveryManEntity;
+import com.zenika.ddd.course.RestaurantEntity;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -17,6 +19,8 @@ public class OrderEntity {
 
     @Builder.Default
     private OrderStatus orderStatus = OrderStatus.CREATED;
+    private RestaurantEntity restaurantEntity;
+    private DeliveryManEntity deliveryMan;
 
     public void pay() {
 
@@ -30,5 +34,19 @@ public class OrderEntity {
 
 
         this.orderStatus = OrderStatus.PAYED;
+    }
+
+    public void deliveryManAcceptedTheOrder(DeliveryManEntity deliveryManEntity) {
+
+        // Guards
+
+        this.orderStatus = OrderStatus.TO_COLLECT;
+
+        this.deliveryMan = deliveryManEntity;
+        deliveryMan.moveToCollectOrder(this);
+    }
+
+    public void collect() {
+        this.orderStatus = OrderStatus.COLLECTED;
     }
 }

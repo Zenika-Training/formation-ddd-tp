@@ -1,5 +1,6 @@
 package com.zenika.ddd.course;
 
+import com.zenika.ddd.commande.OrderEntity;
 import com.zenika.ddd.shared.Adresse;
 import com.zenika.ddd.shared.Position;
 import lombok.Builder;
@@ -49,5 +50,13 @@ public class DeliveryManEntity {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public void moveToCollectOrder(OrderEntity orderEntity) {
+        this.moveToPosition(orderEntity.getRestaurantEntity().getPosition(), 0.0001f);
+    }
+
+    public void collect(OrderEntity order) {
+        order.collect();
     }
 }

@@ -35,7 +35,7 @@ class CommandeMapperTest {
     void should_map_OrderEntity_to_OrderDto() {
         // Given
         OrderEntity orderEntity = OrderEntity.builder()
-                .id(UUID.fromString("f47ac10b-58cc-4372-a567-0e02b2c3d479"))
+                .id(UUID.fromString("f47ac10b-58cc-4372-a567-0e02b2c3d479").toString())
                 .dateCommande(LocalDateTime.of(2024, 6, 11, 11, 0))
                 .itemVOList(List.of())
                 .build();
