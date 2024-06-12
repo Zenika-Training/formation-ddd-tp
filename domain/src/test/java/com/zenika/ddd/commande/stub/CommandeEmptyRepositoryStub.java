@@ -1,20 +1,22 @@
 package com.zenika.ddd.commande.stub;
 
 import com.zenika.ddd.commande.OrderEntity;
+import com.zenika.ddd.doc.Stub;
 import com.zenika.ddd.port.CommandeRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class CommandeExistingOrderRepositoryStub implements CommandeRepository {
+@Stub
+public class CommandeEmptyRepositoryStub implements CommandeRepository {
     @Override
-    public List<OrderEntity> save(List<OrderEntity> OrderEntity) {
-        return List.of();
+    public Optional<OrderEntity> save(OrderEntity OrderEntity) {
+        return Optional.empty();
     }
 
     @Override
     public Optional<OrderEntity> findById(String id) {
-        return Optional.of(OrderEntity.builder().build());
+        return Optional.empty();
     }
 
     @Override

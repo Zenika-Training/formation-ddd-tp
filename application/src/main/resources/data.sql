@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS `item` (
+  `id` VARCHAR2 PRIMARY KEY,
+  `name` VARCHAR2 NOT NULL,
+  `price` DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `order` (
+  `id` VARCHAR2 PRIMARY KEY,
+  `customer_id` INT NOT NULL,
+  `order_date` DATE NOT NULL,
+  `total_price` DECIMAL(10, 2) NOT NULL,
+  `status` ENUM('NEW', 'SHIPPED', 'DELIVERED') NOT NULL
+);

@@ -9,7 +9,7 @@ import java.util.Optional;
 @DomainService
 public interface CommandeRepository {
 
-    List<OrderEntity> save(List<OrderEntity> OrderEntity);
+    Optional<OrderEntity> save(OrderEntity OrderEntity);
 
     Optional<OrderEntity> findById(String id);
 

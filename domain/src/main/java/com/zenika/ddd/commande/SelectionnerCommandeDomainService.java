@@ -32,6 +32,7 @@ public class SelectionnerCommandeDomainService {
             throw new IllegalArgumentException("La commande existe déjà");
         }
 
+        commandeRepository.save(commande);
         commandes.add(commande);
         return commande;
     }
