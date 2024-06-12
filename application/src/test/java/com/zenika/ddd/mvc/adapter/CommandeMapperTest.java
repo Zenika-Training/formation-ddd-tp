@@ -28,7 +28,7 @@ class CommandeMapperTest {
         // When
         OrderEntity commandeEntity = commandeMapper.toCommandeEntity(orderDto);
 
-        assertThat(commandeEntity.getId()).isEqualTo(UUID.fromString(orderDto.getId()));
+        assertThat(commandeEntity.getId()).isEqualTo(orderDto.getId());
     }
 
     @Test

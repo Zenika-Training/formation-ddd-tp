@@ -1,6 +1,8 @@
 package com.zenika.ddd.commande;
 
 import com.zenika.ddd.course.DeliveryManEntity;
+import com.zenika.ddd.course.RestaurantEntity;
+import com.zenika.ddd.shared.Position;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Test;
 
@@ -50,10 +52,14 @@ class OrderEntityTest {
     void OrderEntity_should_be_set_to_status_TO_COLLECT_when_a_deliveryMan_accepted_it() {
         DeliveryManEntity deliveryManEntity = DeliveryManEntity.builder()
                 .id(UUID.fromString("f47ac10b-58cc-4372-a567-0e02b2c3d479"))
+                .position(new Position(48.8566, 2.3522))
                 .build();
 
         OrderEntity orderEntity = OrderEntity.builder()
                 .id(UUID.fromString("f47ac10b-58cc-4372-a567-0e02b2c3d479").toString())
+                .restaurantEntity(RestaurantEntity.builder()
+                        .position(new Position(48.8566, 2.3522))
+                        .build())
                 .orderStatus(OrderStatus.PAYED)
                 .build();
 
