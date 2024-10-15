@@ -1,7 +1,7 @@
 package com.zenika.ddd.mvc.adapter;
 
 import com.zenika.ddd.commande.OrderEntity;
-import com.zenika.ddd.mvc.dto.OrderDto;
+import com.zenika.ddd.mvc.dto.CommandeDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -13,11 +13,11 @@ public class CommandeMapper {
 
     private final PlatMapper platMapper;
 
-    public OrderEntity toCommandeEntity(OrderDto orderDto) {
+    public OrderEntity toCommandeEntity(CommandeDTO commandeDTO) {
         return OrderEntity.builder()
-                          .id(UUID.fromString(orderDto.getId()))
-                          .dateCommande(orderDto.getDateCommande())
-                          .itemVOList(PlatMapper.toPlatVOList(orderDto.getPlats()))
+                          .id(UUID.fromString(commandeDTO.getId()))
+                          .dateCommande(commandeDTO.getDateCommande())
+                          .itemVOList(PlatMapper.toPlatVOList(commandeDTO.getPlats()))
                           .build();
     }
 }

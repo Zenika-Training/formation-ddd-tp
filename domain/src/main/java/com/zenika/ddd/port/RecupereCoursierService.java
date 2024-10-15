@@ -1,9 +1,9 @@
 package com.zenika.ddd.port;
 
 
-import com.zenika.ddd.course.DeliveryManEntity;
+import com.zenika.ddd.course.LivreurEntity;
 
 public interface RecupereCoursierService {
 
-    DeliveryManEntity recupererCoursier();
+    LivreurEntity recupererCoursier();
 }

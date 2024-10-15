@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DeliveryManEntityTest {
+class LivreurEntityTest {
 
     @Test
     void delivery_man_should_move_to_position() {
         // Given
-        DeliveryManEntity deliveryMan = DeliveryManEntity.builder()
+        LivreurEntity deliveryMan = LivreurEntity.builder()
                                                          .nom("Outan")
                                                          .prenom("Laurent")
                                                          .position(new Position(47.216620, -1.577638))
