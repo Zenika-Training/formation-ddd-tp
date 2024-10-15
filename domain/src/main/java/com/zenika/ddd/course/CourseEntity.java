@@ -17,7 +17,7 @@ import java.util.UUID;
 @DomainObject
 public class CourseEntity {
     @Builder.Default
-    private final CourseVoId id = new CourseVoId(UUID.randomUUID());
+    private final UUID id = UUID.randomUUID();
     private UUID commandeId;
     private LivreurEntity livreurEntity;
     @Builder.Default

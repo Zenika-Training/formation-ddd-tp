@@ -10,7 +10,7 @@ import java.util.UUID;
 @Builder
 @Getter
 public class LivreurEntity {
-    private LivreurVoId id;
+    private UUID id;
     private String nom;
     private String prenom;
     private String email;
@@ -19,7 +19,7 @@ public class LivreurEntity {
 
     public void createCoursier(String nom, String prenom, String email, Adresse adresse) {
         LivreurEntity.builder()
-                         .id(new LivreurVoId(UUID.randomUUID()))
+                         .id(UUID.randomUUID())
                          .nom(nom)
                          .prenom(prenom)
                          .email(email)
