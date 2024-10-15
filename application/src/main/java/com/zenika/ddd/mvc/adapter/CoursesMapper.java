@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Component
-@NoArgsConstructor
 public class CoursesMapper {
     public List<CourseEntity> toCourseEntities(List<CoursesDTO> coursesDTO) {
         return coursesDTO.stream().map(this::mapCourseDTOsToCourseEntities).toList();

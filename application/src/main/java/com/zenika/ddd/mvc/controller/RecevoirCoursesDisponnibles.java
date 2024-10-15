@@ -4,6 +4,7 @@ import com.zenika.ddd.course.CourseEntity;
 import com.zenika.ddd.mvc.adapter.CoursesMapper;
 import com.zenika.ddd.mvc.dto.CoursesDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,8 +19,8 @@ public class RecevoirCoursesDisponnibles {
     private final CoursesMapper coursesMapper;
 
     @PostMapping("/courses")
-    public void recevoirCoursesDisponnibles(@RequestBody
-    List<CoursesDTO> coursesDTO) {
-        courseEntities.addAll(coursesMapper.toCourseEntities(coursesDTO));
+    public ResponseEntity recevoirCoursesDisponnibles(@RequestBody List<CoursesDTO> coursesDTO) {
+         courseEntities.addAll(coursesMapper.toCourseEntities(coursesDTO));
+         return ResponseEntity.ok().build();
     }
 }

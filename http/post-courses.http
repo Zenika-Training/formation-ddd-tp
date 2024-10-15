@@ -1,0 +1,26 @@
+POST 127.0.0.1:8080/courses
+Content-Type: application/json
+
+[ {
+  "commandesDTOs" : [ {
+    "id" : "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "dateCommande" : "2024-10-15T10:15:00",
+    "clientFinal" : {
+      "id" : "f47ac10b-58cc-FFFF-a567-0e02b2c3d481",
+      "first_name" : "John",
+      "last_name" : "Doe",
+      "adress" : null,
+      "latitude" : 48.8566,
+      "longitude" : 2.3522,
+      "phone" : null,
+      "mail" : null
+    },
+    "restaurant" : {
+      "id" : "f47ac10b-58cc-4372-a567-0e02b2c3d480",
+      "nom" : "KFC",
+      "latitude" : 48.8577,
+      "longitude" : 2.3511
+    },
+    "plats" : null
+  } ]
+} ]
