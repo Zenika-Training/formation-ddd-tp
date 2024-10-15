@@ -1,9 +1,9 @@
 package com.zenika.ddd.configuration;
 
-import com.zenika.ddd.infrastructure.SpringConfigInfrastructure;
 import com.zenika.ddd.doc.DomainObject;
 import com.zenika.ddd.doc.DomainService;
 import com.zenika.ddd.doc.Stub;
+import com.zenika.ddd.infrastructure.SpringConfigInfrastructure;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
