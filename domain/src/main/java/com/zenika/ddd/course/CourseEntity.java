@@ -39,4 +39,14 @@ public class CourseEntity {
     public int hashCode() {
         return Objects.hashCode(getId());
     }
+
+    @Override
+    public String toString() {
+        return "CourseEntity{" + "id=" + id + ", commandeId=" + commandeId + ", livreurEntity=" + livreurEntity + ", statut=" + statut + ", destination=" + destination + ", restaurant=" + restaurant + '}';
+    }
+
+    public void assignLivreur(LivreurEntity livreur) {
+        this.livreurEntity = livreur;
+        this.statut = StatutCourse.ACCEPTED;
+    }
 }
