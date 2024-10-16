@@ -12,14 +12,12 @@ public class PlatMapper {
     public static List<ItemVO> toPlatVOList(List<PlatDto> plats) {
         List<ItemVO> itemVOList = new ArrayList<>();
 
-        plats.forEach(platDto -> {
-            ItemVO itemVO = ItemVO.builder()
-                                  .nom(platDto.getNom())
-                                  .prix(platDto.getPrix())
-                                  .images(platDto.getImages())
-                                  .build();
-            itemVOList.add(itemVO);
-        });
+        if (plats != null) {
+            plats.forEach(platDto -> {
+                ItemVO itemVO = ItemVO.builder().nom(platDto.getNom()).prix(platDto.getPrix()).images(platDto.getImages()).build();
+                itemVOList.add(itemVO);
+            });
+        }
 
         return itemVOList;
     }

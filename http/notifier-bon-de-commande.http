@@ -1,8 +1,9 @@
-POST 127.0.0.1:8088/courses
+POST 127.0.0.1:8088/notifier/commande/prete
 Content-Type: application/json
 
-[ {
-  "commandesDTOs" : [ {
+{
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d490",
+    "commandeDTO": {
     "id" : "f47ac10b-58cc-4372-a567-0e02b2c3d479",
     "dateCommande" : "2024-10-15T10:15:00",
     "clientFinal" : {
@@ -22,5 +23,5 @@ Content-Type: application/json
       "longitude" : 2.3511
     },
     "plats" : null
-  } ]
-} ]
+  }
+}

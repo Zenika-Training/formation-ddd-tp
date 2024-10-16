@@ -5,6 +5,7 @@ import com.zenika.ddd.course.Destination;
 import com.zenika.ddd.course.LivreurEntity;
 import com.zenika.ddd.shared.Position;
 import com.zenika.ddd.shared.StatutCourse;
+import com.zenika.ddd.stub.CourseRepositoryStub;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SelectionnerCourseDomainServiceTest {
 
-    SelectionnerCourseDomainService selectionnerCourseDomainService = new SelectionnerCourseDomainService();
+    SelectionnerCourseDomainService selectionnerCourseDomainService = new SelectionnerCourseDomainService(new CourseRepositoryStub());
 
     @Test
     @DisplayName("Should assign the delivery person to the closest course")
@@ -43,7 +44,7 @@ class SelectionnerCourseDomainServiceTest {
                 .build();
 
         // When
-        CourseEntity result = selectionnerCourseDomainService.selectCourse(courses, livreurEntity);
+        CourseEntity result = selectionnerCourseDomainService.selectCourse(courses);
 
         // Then
         assertNotNull(result);
@@ -62,7 +63,7 @@ class SelectionnerCourseDomainServiceTest {
         LivreurEntity livreurEntity = LivreurEntity.builder().position(Position.builder().build()).build();
 
         // When
-        CourseEntity result = selectionnerCourseDomainService.selectCourse(courses, livreurEntity);
+        CourseEntity result = selectionnerCourseDomainService.selectCourse(courses);
 
         // Then`
         assertNotNull(result);

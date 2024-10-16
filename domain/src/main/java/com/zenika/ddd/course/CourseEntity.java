@@ -1,5 +1,6 @@
 package com.zenika.ddd.course;
 
+import com.zenika.ddd.doc.AggregateRoot;
 import com.zenika.ddd.doc.DomainObject;
 import com.zenika.ddd.shared.StatutCourse;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @DomainObject
+@AggregateRoot
 public class CourseEntity {
     @Builder.Default
     private final UUID id = UUID.randomUUID();
