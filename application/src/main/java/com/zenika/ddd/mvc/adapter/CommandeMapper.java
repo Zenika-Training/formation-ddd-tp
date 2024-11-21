@@ -1,6 +1,5 @@
 package com.zenika.ddd.mvc.adapter;
 
-import com.zenika.ddd.course.DeliveryManEntity;
 import com.zenika.ddd.mvc.dto.CommandeMessageDto;
 import com.zenika.ddd.order.ClientEntity;
 import com.zenika.ddd.order.OrderEntity;
@@ -14,7 +13,6 @@ public class CommandeMapper {
         return OrderEntity.builder()
                 .id(UUID.randomUUID())
                 .clientEntity(ClientEntity.builder().build())
-                .deliveryManEntity(DeliveryManEntity.builder().build())
                 .build();
     }
 }

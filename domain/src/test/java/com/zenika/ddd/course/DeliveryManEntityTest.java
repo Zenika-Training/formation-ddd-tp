@@ -1,5 +1,6 @@
 package com.zenika.ddd.course;
 
+import com.zenika.ddd.order.DeliveryManEntity;
 import com.zenika.ddd.shared.Position;
 import org.junit.jupiter.api.Test;
 

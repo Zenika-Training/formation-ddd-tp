@@ -5,6 +5,7 @@ import com.zenika.ddd.doc.DomainService;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +13,11 @@ import java.util.List;
 @Builder
 @Getter
 @DomainService
-@NoArgsConstructor
+@RequiredArgsConstructor
 public class AcceptOrderDomainService {
 
     private final List<OrderEntity> commandes = new ArrayList<>();
+    private final DeliveryManRepository deliveryManRepository;
 
     public void ajouterCommande(OrderEntity commande) {
         commandes.add(commande);
@@ -32,7 +34,12 @@ public class AcceptOrderDomainService {
 
     public OrderEntity accept(OrderEntity order) {
 
+        // Change OrderEntity state to ACCEPTED
         order.accept();
+
+        // Add a deliveryMan on the Order
+        DeliveryManEntity deliveryMan = deliveryManRepository.getDeliveryMan();
+        order.affectDeliveryMan(deliveryMan);
 
         return order;
     }

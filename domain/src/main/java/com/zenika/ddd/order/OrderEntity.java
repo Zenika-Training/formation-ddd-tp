@@ -1,6 +1,5 @@
 package com.zenika.ddd.order;
 
-import com.zenika.ddd.course.DeliveryManEntity;
 import com.zenika.ddd.doc.DomainObject;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,5 +27,9 @@ public class OrderEntity {
 
     public void accept() {
         this.orderStatus = OrderStatus.ACCEPTED;
+    }
+
+    public void affectDeliveryMan(DeliveryManEntity deliveryMan) {
+        this.deliveryManEntity = deliveryMan;
     }
 }
