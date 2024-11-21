@@ -1,4 +1,4 @@
-package com.zenika.ddd.commande;
+package com.zenika.ddd.order;
 
 import com.zenika.ddd.doc.DomainObject;
 import com.zenika.ddd.shared.Adresse;
@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @DomainObject
-public class ConsumerEntity {
+public class ClientEntity {
 
     @NonNull
     private String nom;

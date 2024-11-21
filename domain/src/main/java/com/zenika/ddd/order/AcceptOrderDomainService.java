@@ -1,4 +1,4 @@
-package com.zenika.ddd.commande;
+package com.zenika.ddd.order;
 
 import com.zenika.ddd.course.CourseEntity;
 import com.zenika.ddd.doc.DomainService;
@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @DomainService
 @NoArgsConstructor
-public class SelectionnerCommandeDomainService {
+public class AcceptOrderDomainService {
 
     private final List<OrderEntity> commandes = new ArrayList<>();
 
@@ -28,5 +28,12 @@ public class SelectionnerCommandeDomainService {
                 .build();
 
         return course;
+    }
+
+    public OrderEntity accept(OrderEntity order) {
+
+        order.accept();
+
+        return order;
     }
 }

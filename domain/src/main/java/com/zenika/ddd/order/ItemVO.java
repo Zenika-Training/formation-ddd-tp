@@ -1,4 +1,4 @@
-package com.zenika.ddd.commande;
+package com.zenika.ddd.order;
 
 import com.zenika.ddd.doc.ValueObject;
 import lombok.Builder;

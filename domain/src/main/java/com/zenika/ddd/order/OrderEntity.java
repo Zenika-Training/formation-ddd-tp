@@ -1,4 +1,4 @@
-package com.zenika.ddd.commande;
+package com.zenika.ddd.order;
 
 import com.zenika.ddd.doc.DomainObject;
 import lombok.AllArgsConstructor;
@@ -18,8 +18,12 @@ import java.util.UUID;
 public class OrderEntity {
 
     private UUID id;
-    private ConsumerEntity consumerEntity;
+    private ClientEntity clientEntity;
     private LocalDateTime dateCommande;
     private List<ItemVO> itemVOList;
+    private OrderStatus orderStatus = OrderStatus.AVAILABLE;
 
+    public void accept() {
+        this.orderStatus = OrderStatus.ACCEPTED;
+    }
 }
