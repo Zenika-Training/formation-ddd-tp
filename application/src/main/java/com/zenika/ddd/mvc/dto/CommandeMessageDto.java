@@ -12,5 +12,5 @@ public class CommandeMessageDto {
     private String id;
     private String date;
     private List<CommandeProductDto> products;
-    private ClientDeliveryManDto clientDeliveryManDto;
+    private ClientDto clientDto;
 }
