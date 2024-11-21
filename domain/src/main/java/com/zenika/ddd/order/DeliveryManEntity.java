@@ -50,4 +50,12 @@ public class DeliveryManEntity {
             }
         }
     }
+
+    public void moveToCollectOrder(OrderEntity order) {
+        // TODO: Implement this method
+    }
+
+    public void collect(OrderEntity order) {
+        // TODO: Implement this method
+    }
 }

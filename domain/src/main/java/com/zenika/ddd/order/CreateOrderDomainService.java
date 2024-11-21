@@ -13,7 +13,7 @@ public class CreateOrderDomainService {
             throw new RuntimeException();
         }
 
-        if (order.getClientEntity() == null)
+        if (order.getCustomerEntity() == null)
             throw new IllegalArgumentException("client entity should not be null");
 
         if (order.getDeliveryManEntity() == null)

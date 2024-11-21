@@ -2,7 +2,6 @@ package com.zenika.ddd.order;
 
 import com.zenika.ddd.doc.DomainObject;
 import com.zenika.ddd.shared.Adresse;
-import com.zenika.ddd.shared.Position;
 import lombok.*;
 
 @Getter
@@ -10,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @DomainObject
-public class ClientEntity {
+public class CustomerEntity {
 
     @NonNull
     private String nom;

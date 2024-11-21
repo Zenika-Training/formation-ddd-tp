@@ -1,5 +1,5 @@
 package com.zenika.ddd.order;
 
 public enum Status {
-    ACCEPTED, AVAILABLE
+    ACCEPTED, COLLECTED, AVAILABLE
 }

@@ -16,7 +16,7 @@ class CreateOrderDomainServiceTest {
         // Given
 
         OrderEntity order = OrderEntity.builder()
-                .clientEntity(ClientEntity.builder()
+                .customerEntity(CustomerEntity.builder()
                         .nom("toto")
                         .prenom("prenomtiti")
                         .adresse(Adresse.builder().build())
@@ -32,7 +32,7 @@ class CreateOrderDomainServiceTest {
     void should_throw_an_exception_if_client_is_missing() {
         // Given
         OrderEntity order = OrderEntity.builder()
-                .clientEntity(null)
+                .customerEntity(null)
                 .deliveryManEntity(DeliveryManEntity.builder().build())
                 .build();
 
@@ -44,7 +44,7 @@ class CreateOrderDomainServiceTest {
     void should_throw_an_exception_if_some_uuid_are_missing() {
         // Given
         OrderEntity order = OrderEntity.builder()
-                .clientEntity(ClientEntity.builder()
+                .customerEntity(CustomerEntity.builder()
                         .nom("toto")
                         .prenom("prenomtiti")
                         .adresse(Adresse.builder().build())
@@ -62,7 +62,7 @@ class CreateOrderDomainServiceTest {
         // given
         OrderEntity order = OrderEntity.builder()
                 .id(UUID.randomUUID())
-                .clientEntity(ClientEntity.builder()
+                .customerEntity(CustomerEntity.builder()
                         .nom("toto")
                         .prenom("prenomtiti")
                         .adresse(Adresse.builder().build())
