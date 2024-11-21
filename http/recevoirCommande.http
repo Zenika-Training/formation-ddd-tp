@@ -3,11 +3,11 @@ POST http://localhost:8888/commande
 Content-Type: application/json
 
 {
-    "id": "123456",
+    "id": "AFD50ccb-a590-4c8f-921b-1eb663386440",
     "date": "2023-06-02",
     "products": [
         {
-        "id": "1",
+        "id": "02350ccb-a590-4c8f-921b-1eb663386440",
         "name": "product1",
         "price": 10
         },
@@ -17,5 +17,15 @@ Content-Type: application/json
         "price": 20
         }
     ]
+    "client": {
+        "id": "03850ccb-a590-4c8f-921b-1eb663386440",
+        "name": "client1"
+        "position": "47.1234, 0.1234"
+       },
+     "deliveryMan": {
+        "id": "03850ccb-a590-4c8f-921b-1eb663386441",
+        "name": "deliveryMan1"
+        "position": "47.1234, 0.1234"
+       }
     }
 ###

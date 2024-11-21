@@ -1,5 +1,6 @@
 package com.zenika.ddd.order;
 
+import com.zenika.ddd.course.DeliveryManEntity;
 import com.zenika.ddd.doc.DomainObject;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,8 +20,10 @@ public class OrderEntity {
 
     private UUID id;
     private ClientEntity clientEntity;
+    private DeliveryManEntity deliveryManEntity;
     private LocalDateTime dateCommande;
     private List<ItemVO> itemVOList;
+    @Builder.Default
     private OrderStatus orderStatus = OrderStatus.AVAILABLE;
 
     public void accept() {
