@@ -1,4 +1,6 @@
-package com.zenika.ddd.order;
+package com.zenika.ddd.port;
+
+import com.zenika.ddd.order.DeliveryManEntity;
 
 public interface DeliveryManRepository {
 

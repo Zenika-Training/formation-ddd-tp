@@ -9,7 +9,7 @@ public class CreateOrderDomainService {
     public OrderEntity receiveOrder(@NonNull OrderEntity order) {
 
         // Guard
-        if (!order.getOrderStatus().equals(OrderStatus.AVAILABLE)) {
+        if (!order.getStatus().equals(Status.AVAILABLE)) {
             throw new RuntimeException();
         }
 

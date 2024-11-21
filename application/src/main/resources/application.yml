@@ -1,2 +1,6 @@
 server:
     port: 8888
+spring:
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false

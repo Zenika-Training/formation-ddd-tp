@@ -2,6 +2,7 @@ package com.zenika.ddd.order;
 
 import com.zenika.ddd.doc.DomainObject;
 import com.zenika.ddd.shared.Adresse;
+import com.zenika.ddd.shared.Position;
 import lombok.*;
 
 @Getter

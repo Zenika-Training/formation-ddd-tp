@@ -23,10 +23,10 @@ public class OrderEntity {
     private LocalDateTime dateCommande;
     private List<ItemVO> itemVOList;
     @Builder.Default
-    private OrderStatus orderStatus = OrderStatus.AVAILABLE;
+    private Status status = Status.AVAILABLE;
 
     public void accept() {
-        this.orderStatus = OrderStatus.ACCEPTED;
+        this.status = Status.ACCEPTED;
     }
 
     public void affectDeliveryMan(DeliveryManEntity deliveryMan) {

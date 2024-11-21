@@ -15,7 +15,7 @@ class OrderEntityTest {
         OrderEntity order = new OrderEntity();
 
         // Then
-        assertEquals(OrderStatus.AVAILABLE, order.getOrderStatus());
+        assertEquals(Status.AVAILABLE, order.getStatus());
     }
 
 }

@@ -50,7 +50,7 @@ class CreateOrderDomainServiceTest {
                         .adresse(Adresse.builder().build())
                         .build())
                 .deliveryManEntity(DeliveryManEntity.builder().build())
-                .orderStatus(OrderStatus.AVAILABLE)
+                .status(Status.AVAILABLE)
                 .build();
 
         // When
@@ -74,6 +74,6 @@ class CreateOrderDomainServiceTest {
         OrderEntity receiveOrder = createOrderDomainService.receiveOrder(order);
 
         // then
-        assertEquals(OrderStatus.AVAILABLE, receiveOrder.getOrderStatus());
+        assertEquals(Status.AVAILABLE, receiveOrder.getStatus());
     }
 }

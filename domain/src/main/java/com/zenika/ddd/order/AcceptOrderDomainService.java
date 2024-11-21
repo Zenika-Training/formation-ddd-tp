@@ -2,9 +2,9 @@ package com.zenika.ddd.order;
 
 import com.zenika.ddd.course.CourseEntity;
 import com.zenika.ddd.doc.DomainService;
+import com.zenika.ddd.port.DeliveryManRepository;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;

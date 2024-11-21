@@ -1,4 +1,4 @@
-package com.zenika.ddd.mvc;
+package com.zenika.ddd.mvc.controller;
 
 import com.zenika.ddd.mvc.adapter.CommandeMapper;
 import com.zenika.ddd.mvc.dto.CommandeMessageDto;

@@ -22,7 +22,7 @@ class AcceptOrderDomainServiceTest {
         OrderEntity orderEntity = acceptOrderDomainService.accept(order);
 
         // Then
-        assertEquals(OrderStatus.ACCEPTED, orderEntity.getOrderStatus());
+        assertEquals(Status.ACCEPTED, orderEntity.getStatus());
     }
 
     @Test

@@ -1,6 +1,7 @@
 package com.zenika.ddd.order;
 
 import com.zenika.ddd.doc.Stub;
+import com.zenika.ddd.port.DeliveryManRepository;
 
 import java.util.UUID;
 
