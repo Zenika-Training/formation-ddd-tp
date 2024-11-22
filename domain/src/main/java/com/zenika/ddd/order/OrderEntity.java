@@ -32,6 +32,10 @@ public class OrderEntity {
         this.status = Status.ACCEPTED;
     }
 
+    public void collect() {
+        this.status = Status.COLLECTED;
+    }
+
     public void affectDeliveryMan(DeliveryManEntity deliveryMan) {
         this.deliveryManEntity = deliveryMan;
     }

@@ -52,10 +52,10 @@ public class DeliveryManEntity {
     }
 
     public void moveToCollectOrder(OrderEntity order) {
-        // TODO: Implement this method
+        moveToPosition(order.getRestaurantEntity().getPosition(), 0.0001f);
     }
 
     public void collect(OrderEntity order) {
-        // TODO: Implement this method
+        order.collect();
     }
 }
