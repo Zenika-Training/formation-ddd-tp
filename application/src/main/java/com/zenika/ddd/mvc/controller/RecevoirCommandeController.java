@@ -2,7 +2,7 @@ package com.zenika.ddd.mvc.controller;
 
 import com.zenika.ddd.mvc.adapter.CommandeMapper;
 import com.zenika.ddd.mvc.dto.CommandeMessageDto;
-import com.zenika.ddd.order.CreateOrderDomainService;
+import com.zenika.ddd.order.services.CreateOrderDomainService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

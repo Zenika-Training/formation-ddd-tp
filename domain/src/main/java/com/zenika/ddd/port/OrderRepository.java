@@ -1,6 +1,6 @@
 package com.zenika.ddd.port;
 
-import com.zenika.ddd.order.OrderEntity;
+import com.zenika.ddd.order.model.OrderEntity;
 
 import java.util.List;
 

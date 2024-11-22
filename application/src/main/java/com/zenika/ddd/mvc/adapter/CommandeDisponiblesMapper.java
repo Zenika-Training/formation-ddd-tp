@@ -1,8 +1,8 @@
 package com.zenika.ddd.mvc.adapter;
 
 import com.zenika.ddd.mvc.dto.CommandeDisponibleDto;
-import com.zenika.ddd.order.OrderEntity;
-import com.zenika.ddd.order.Status;
+import com.zenika.ddd.order.model.OrderEntity;
+import com.zenika.ddd.order.model.Status;
 import lombok.Builder;
 import org.springframework.stereotype.Component;
 

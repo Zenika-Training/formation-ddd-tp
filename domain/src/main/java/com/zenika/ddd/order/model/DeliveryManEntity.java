@@ -1,4 +1,4 @@
-package com.zenika.ddd.order;
+package com.zenika.ddd.order.model;
 
 import com.zenika.ddd.shared.Adresse;
 import com.zenika.ddd.shared.Position;

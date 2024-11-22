@@ -1,7 +1,7 @@
 package com.zenika.ddd.course;
 
 import com.zenika.ddd.doc.DomainObject;
-import com.zenika.ddd.order.DeliveryManEntity;
+import com.zenika.ddd.order.model.DeliveryManEntity;
 import com.zenika.ddd.shared.StatutCourse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,9 @@
 package com.zenika.ddd.order;
 
 import com.zenika.ddd.course.RestaurantEntity;
+import com.zenika.ddd.order.model.DeliveryManEntity;
+import com.zenika.ddd.order.model.OrderEntity;
+import com.zenika.ddd.order.model.Status;
 import com.zenika.ddd.shared.Position;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Test;

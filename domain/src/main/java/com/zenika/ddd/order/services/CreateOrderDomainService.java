@@ -1,6 +1,8 @@
-package com.zenika.ddd.order;
+package com.zenika.ddd.order.services;
 
 import com.zenika.ddd.doc.DomainService;
+import com.zenika.ddd.order.model.OrderEntity;
+import com.zenika.ddd.order.model.Status;
 import lombok.NonNull;
 
 @DomainService

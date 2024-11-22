@@ -2,7 +2,7 @@ package com.zenika.ddd.mvc.adapter;
 
 import com.zenika.ddd.mvc.dto.CommandeMessageDto;
 import com.zenika.ddd.mvc.dto.CommandeProductDto;
-import com.zenika.ddd.order.OrderEntity;
+import com.zenika.ddd.order.model.OrderEntity;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

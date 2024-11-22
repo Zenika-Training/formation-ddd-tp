@@ -1,6 +1,8 @@
 package com.zenika.ddd.order;
 
 import com.zenika.ddd.doc.Stub;
+import com.zenika.ddd.order.model.OrderEntity;
+import com.zenika.ddd.order.model.Status;
 import com.zenika.ddd.port.OrderRepository;
 
 import java.util.List;

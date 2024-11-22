@@ -1,8 +1,8 @@
 package com.zenika.ddd.mvc.adapter;
 
 import com.zenika.ddd.mvc.dto.CommandeMessageDto;
-import com.zenika.ddd.order.CustomerEntity;
-import com.zenika.ddd.order.OrderEntity;
+import com.zenika.ddd.order.model.CustomerEntity;
+import com.zenika.ddd.order.model.OrderEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;

@@ -1,5 +1,10 @@
 package com.zenika.ddd.order;
 
+import com.zenika.ddd.order.model.CustomerEntity;
+import com.zenika.ddd.order.model.DeliveryManEntity;
+import com.zenika.ddd.order.model.OrderEntity;
+import com.zenika.ddd.order.model.Status;
+import com.zenika.ddd.order.services.CreateOrderDomainService;
 import com.zenika.ddd.shared.Adresse;
 import org.junit.jupiter.api.Test;
 
@@ -76,4 +81,6 @@ class CreateOrderDomainServiceTest {
         // then
         assertEquals(Status.AVAILABLE, receiveOrder.getStatus());
     }
+
+
 }
