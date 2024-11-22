@@ -6,6 +6,7 @@ import com.zenika.ddd.order.model.Status;
 import com.zenika.ddd.port.OrderRepository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Stub
@@ -29,11 +30,13 @@ public class OrderRepositoryStub implements OrderRepository {
     }
 
     @Override
-    public OrderEntity getById(String id) {
-        return OrderEntity.builder()
+    public Optional<OrderEntity> getById(String id) {
+        List<String> idsInDB = List.of("afd0e3b4-0b3b-0000-8b3b-0b3b4b3b0b3b", "afd0e3b4-0b3b-0011-8b3b-0b3b4b3b0b3b", "afd0e3b4-0b3b-0022-8b3b-0b3b4b3b0b3b");
+        if(idsInDB.contains(id)) return Optional.ofNullable(OrderEntity.builder()
                 .id(UUID.fromString(id))
                 .status(Status.AVAILABLE)
-                .build();
+                .build());
+        return Optional.empty();
     }
 
     @Override

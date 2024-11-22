@@ -8,6 +8,7 @@ import com.zenika.ddd.order.services.CreateOrderDomainService;
 import com.zenika.ddd.shared.Adresse;
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,10 +48,32 @@ class CreateOrderDomainServiceTest {
     }
 
     @Test
-    void should_create_an_order() {
+    void should_create_an_order_not_exist() {
         // given
         OrderEntity order = OrderEntity.builder()
-                .id(UUID.randomUUID())
+                .id(UUID.fromString("afd0e3b4-0b3b-4b3b-8b3b-0b3b4b3b0b3b"))
+                .customerEntity(CustomerEntity.builder()
+                        .nom("toto")
+                        .prenom("prenomtiti")
+                        .adresse(Adresse.builder().build())
+                        .build())
+                .deliveryManEntity(DeliveryManEntity.builder().build())
+                .build();
+
+        // when
+        createOrderDomainService.receiveOrder(order);
+
+        // then
+        Optional<OrderEntity> orderEntity = orderRepositoryStub.getById("afd0e3b4-0b3b-4b3b-8b3b-0b3b4b3b0b3b");
+        assertEquals(Optional.empty(), orderEntity);
+    }
+
+
+    @Test
+    void should_create_an_order_existing() {
+        // given
+        OrderEntity order = OrderEntity.builder()
+                .id(UUID.fromString("afd0e3b4-0b3b-0000-8b3b-0b3b4b3b0b3b"))
                 .customerEntity(CustomerEntity.builder()
                         .nom("toto")
                         .prenom("prenomtiti")
@@ -63,8 +86,9 @@ class CreateOrderDomainServiceTest {
         OrderEntity receiveOrder = createOrderDomainService.receiveOrder(order);
 
         // then
+        OrderEntity orderEntity = orderRepositoryStub.getById("afd0e3b4-0b3b-0000-8b3b-0b3b4b3b0b3b").get();
+        assertEquals(UUID.fromString("afd0e3b4-0b3b-0000-8b3b-0b3b4b3b0b3b"), orderEntity.getId());
         assertEquals(Status.AVAILABLE, receiveOrder.getStatus());
     }
-
 
 }
