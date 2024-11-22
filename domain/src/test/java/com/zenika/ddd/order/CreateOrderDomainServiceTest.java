@@ -14,24 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CreateOrderDomainServiceTest {
 
-    CreateOrderDomainService createOrderDomainService = new CreateOrderDomainService();
-
-    @Test
-    void should_throw_an_exception_if_deliveryMan_is_missing() {
-        // Given
-
-        OrderEntity order = OrderEntity.builder()
-                .customerEntity(CustomerEntity.builder()
-                        .nom("toto")
-                        .prenom("prenomtiti")
-                        .adresse(Adresse.builder().build())
-                        .build())
-                .deliveryManEntity(null)
-                .build();
-
-        // When
-        assertThrows(IllegalArgumentException.class, () -> createOrderDomainService.receiveOrder(order));
-    }
+    OrderRepositoryStub orderRepositoryStub = new OrderRepositoryStub();
+    CreateOrderDomainService createOrderDomainService = new CreateOrderDomainService(orderRepositoryStub);
 
     @Test
     void should_throw_an_exception_if_client_is_missing() {

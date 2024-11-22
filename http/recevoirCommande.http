@@ -1,5 +1,5 @@
 ### GET request to example server
-POST http://localhost:8888/commande
+POST http://localhost:8888/commande/recevoir
 Content-Type: application/json
 
 {
@@ -7,24 +7,26 @@ Content-Type: application/json
     "date": "2023-06-02",
     "products": [
         {
-        "id": "02350ccb-a590-4c8f-921b-1eb663386440",
-        "name": "product1",
-        "price": 10
+            "id": "02350ccb-a590-4c8f-921b-1eb663386440",
+            "name": "product1",
+            "price": 10
         },
         {
-        "id": "2",
-        "name": "product2",
-        "price": 20
+            "id": "2",
+            "name": "product2",
+            "price": 20
         }
-    ]
-    "client": {
-        "id": "03850ccb-a590-4c8f-921b-1eb663386440",
-        "name": "client1"
-        "position": "47.1234, 0.1234"
+    ],
+    "clientDto": {
+        "clientUUID": "03850ccb-a590-4c8f-921b-1eb663386440",
+        "clientName": "client1",
+        "clientPrenom": "prenom1",
+        "clientAdresse": "adresse1",
+        "clientPosition": "47.1234, 0.1234"
        },
      "deliveryMan": {
         "id": "03850ccb-a590-4c8f-921b-1eb663386441",
-        "name": "deliveryMan1"
+        "name": "deliveryMan1",
         "position": "47.1234, 0.1234"
        }
     }
