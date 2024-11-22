@@ -26,5 +26,17 @@ public class OrderRepositoryStub implements OrderRepository {
         );
     }
 
+    @Override
+    public OrderEntity getById(String id) {
+        return OrderEntity.builder()
+                .id(UUID.fromString(id))
+                .status(Status.AVAILABLE)
+                .build();
+    }
+
+    @Override
+    public OrderEntity save(OrderEntity orderEntity) {
+        return orderEntity;
+    }
 
 }

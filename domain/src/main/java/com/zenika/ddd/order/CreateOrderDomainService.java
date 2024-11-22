@@ -22,6 +22,9 @@ public class CreateOrderDomainService {
         if (order.getId() == null)
             throw new IllegalArgumentException("deliveryman entity should not be null");
 
+        // TODO: persist order
+
+
         return order;
     }
 }

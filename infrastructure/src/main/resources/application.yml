@@ -1,5 +1,3 @@
-server:
-    port: 8888
 spring:
   h2:
     console.enabled: true
@@ -14,6 +12,3 @@ spring:
     show-sql: true
     defer-datasource-initialization: false
     open-in-view: false
-  jackson:
-    serialization:
-      FAIL_ON_EMPTY_BEANS: false
