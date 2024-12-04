@@ -1,6 +1,6 @@
 package com.zenika.ddd.mvc.adapter;
 
-import com.zenika.ddd.commande.OrderEntity;
+import com.zenika.ddd.order.OrderEntity;
 import com.zenika.ddd.mvc.dto.OrderDto;
 import org.springframework.stereotype.Component;
 
