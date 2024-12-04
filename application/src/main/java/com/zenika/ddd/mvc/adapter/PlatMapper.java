@@ -1,6 +1,6 @@
 package com.zenika.ddd.mvc.adapter;
 
-import com.zenika.ddd.commande.ItemVO;
+import com.zenika.ddd.order.ItemVO;
 import com.zenika.ddd.mvc.dto.PlatDto;
 import org.springframework.stereotype.Component;
 
@@ -13,11 +13,7 @@ public class PlatMapper {
         List<ItemVO> itemVOList = new ArrayList<>();
 
         plats.forEach(platDto -> {
-            ItemVO itemVO = ItemVO.builder()
-                                  .nom(platDto.getNom())
-                                  .prix(platDto.getPrix())
-                                  .images(platDto.getImages())
-                                  .build();
+            ItemVO itemVO = new ItemVO(platDto.getNom(), platDto.getPrix());
             itemVOList.add(itemVO);
         });
 

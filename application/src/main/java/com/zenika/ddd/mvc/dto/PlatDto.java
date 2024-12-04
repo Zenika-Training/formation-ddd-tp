@@ -1,15 +1,23 @@
 package com.zenika.ddd.mvc.dto;
 
-import lombok.Builder;
-import lombok.Getter;
-
 import java.util.List;
 
-@Getter
-@Builder
 public class PlatDto {
 
-    private String nom;
-    private double prix;
+    private final String nom;
+    private final double prix;
     private List<byte[]> images;
+
+    public PlatDto(String nom, double prix) {
+        this.nom = nom;
+        this.prix = prix;
+    }
+
+    public String getNom() {
+        return this.nom;
+    }
+
+    public Double getPrix() {
+        return this.prix;
+    }
 }

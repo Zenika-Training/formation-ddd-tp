@@ -1,30 +1,22 @@
 package com.zenika.ddd.course;
 
-import com.zenika.ddd.shared.Adresse;
 import com.zenika.ddd.shared.Position;
-import lombok.Builder;
-import lombok.Getter;
 
 import java.util.UUID;
 
-@Builder
-@Getter
 public class DeliveryManEntity {
     private UUID id;
     private String nom;
     private String prenom;
     private String email;
     private Position position;
-    private Adresse adresse;
 
-    public void createCoursier(String nom, String prenom, String email, Adresse adresse) {
-        DeliveryManEntity.builder()
-                         .id(UUID.randomUUID())
-                         .nom(nom)
-                         .prenom(prenom)
-                         .email(email)
-                         .adresse(adresse)
-                         .build();
+    public DeliveryManEntity(String nom, String prenom, Position position, String mail) {
+        this.id = UUID.randomUUID();
+        this.nom = nom;
+        this.prenom = prenom;
+        this.position = position;
+        this.email = mail;
     }
 
     public void moveToPosition(Position position, float distance) {
@@ -49,5 +41,62 @@ public class DeliveryManEntity {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public static DeliveryManEntityBuilder builder() {
+        return new DeliveryManEntityBuilder();
+    }
+
+    public static class DeliveryManEntityBuilder {
+        private UUID id;
+        private String nom;
+        private String prenom;
+        private String email;
+        private Position position;
+
+        public DeliveryManEntityBuilder id(UUID id) {
+            this.id = id;
+            return this;
+        }
+
+        public DeliveryManEntityBuilder nom(String nom) {
+            this.nom = nom;
+            return this;
+        }
+
+        public DeliveryManEntityBuilder prenom(String prenom) {
+            this.prenom = prenom;
+            return this;
+        }
+
+        public DeliveryManEntityBuilder email(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public DeliveryManEntityBuilder position(Position position) {
+            this.position = position;
+            return this;
+        }
+
+        public DeliveryManEntity build() {
+            return new DeliveryManEntity(this.nom, this.prenom, this.position, this.email);
+        }
+    }
+
+    public UUID getId() {
+        return this.id;
+    }
+
+    public String getNom() {
+        return this.nom;
+    }
+
+    public String getPrenom() {
+        return this.prenom;
+    }
+
+    public Position getPosition() {
+        return this.position;
     }
 }
