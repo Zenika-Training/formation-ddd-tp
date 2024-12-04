@@ -2,29 +2,22 @@ package com.zenika.ddd.course;
 
 import com.zenika.ddd.shared.Adresse;
 import com.zenika.ddd.shared.Position;
-import lombok.Builder;
-import lombok.Getter;
 
 import java.util.UUID;
 
-@Builder
-@Getter
 public class DeliveryManEntity {
     private UUID id;
     private String nom;
     private String prenom;
     private String email;
     private Position position;
-    private Adresse adresse;
 
-    public void createCoursier(String nom, String prenom, String email, Adresse adresse) {
-        DeliveryManEntity.builder()
-                         .id(UUID.randomUUID())
-                         .nom(nom)
-                         .prenom(prenom)
-                         .email(email)
-                         .adresse(adresse)
-                         .build();
+    public DeliveryManEntity(String nom, String prenom, Position position, String mail) {
+        this.id = UUID.randomUUID();
+        this.nom = nom;
+        this.prenom = prenom;
+        this.position = position;
+        this.email = mail;
     }
 
     public void moveToPosition(Position position, float distance) {
@@ -49,5 +42,9 @@ public class DeliveryManEntity {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public Position getPosition() {
+        return this.position;
     }
 }

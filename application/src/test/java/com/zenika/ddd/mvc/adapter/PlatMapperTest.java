@@ -17,10 +17,7 @@ class PlatMapperTest {
     @DisplayName("Should map PlatDto to PlatVO")
     void should_map_PlatDto_to_PlatVO() {
         // Given
-        PlatDto platDto = PlatDto.builder()
-                                 .nom("nom")
-                                 .prix(10.0)
-                                 .build();
+        PlatDto platDto = new PlatDto("nom", 10.0);
 
         // When
         var platVO = platMapper.toPlatVOList(List.of(platDto));
