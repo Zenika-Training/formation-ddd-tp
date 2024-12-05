@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    hostname: db
+    container_name: db
+    environment:
+      - POSTGRES_HOST=localhost
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=demo
+      - POSTGRES_PASSWORD=demo
+      - POSTGRES_DB=demo
+      - POSTGRES_PASSWORD=root
+      - PGDATA=/var/lib/postgresql/data/sql-files/
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - hexa-network
+    command:
+      - "postgres"
+      - "-c"
+      - "wal_level=logical"
+    healthcheck:
+      test: pg_isready -h db -U admin -d postgres
+      interval: 2s
+      timeout: 2s
+      retries: 3
+      start_period: 2s
+
+  adminer:
+    image: adminer
+    restart: always
+    hostname: adminer
+    container_name: adminer
+    ports:
+      - 9090:8080
+    networks:
+      - hexa-network
+
+volumes:
+  pgdata:
+    driver: local
+
+networks:
+  hexa-network:
+    name: hexa-network
